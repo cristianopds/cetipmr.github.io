@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CETI Professora Maria de Castro Ribeiro - Cursos Técnicos</title>
+  <style>
+    /* Fundo geral e fontes */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #FFD700, #FFCC00, #FFC300);
+      background-attachment: fixed;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 40px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.3em;
+      margin: 0;
+      font-weight: 700;
+      color: #000;
+    }
+
+    header h2 {
+      font-size: 1.5em;
+      margin: 8px 0;
+      color: #111;
+    }
+
+    header h3 {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #000;
+    }
+
+    /* Conteúdo principal */
+    main {
+      padding: 40px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* Cartões dos cursos */
+    .curso {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 750px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .curso:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .curso h3 {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    .curso h3::after {
+      content: "+";
+      font-size: 1.5em;
+      color: #000;
+      transition: transform 0.3s ease;
+    }
+
+    .curso.ativo h3::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    /* Cores dos cursos */
+    .desenvolvimento { background-color: #4169e1; color: #000; }
+    .saude { background-color: #50c878; color: #000; }
+    .marketing { background-color: #0f52ba; color: #000; }
+    .informatica { background-color: #4169e1; color: #000; }
+
+    /* Descrição oculta */
+    .descricao {
+      display: none;
+      margin-top: 15px;
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.05em;
+      line-height: 1.6em;
+      text-align: justify;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .curso.ativo .descricao {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Título EJA */
+    .titulo-eja {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      margin-top: 30px;
+    }
+
+    .titulo-eja h2 {
+      font-size: 1.6em;
+      color: #000;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      color: #000;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CETI Professora Maria de Castro Ribeiro</h1>
+    <h2>Apresentação dos Cursos Técnicos</h2>
+    <h3>(Tempo Integral Integrado)</h3>
+  </header>
+
+  <main>
+    <!-- Desenvolvimento de Sistemas -->
+    <div class="curso desenvolvimento">
+      <h3>Desenvolvimento de Sistemas</h3>
+      <div class="descricao">
+        O curso de Desenvolvimento de Sistemas prepara o aluno para criar programas, aplicativos e sites que facilitam a vida das pessoas e das empresas. O estudante aprende lógica de programação, banco de dados, linguagens como HTML, JavaScript e Python, além de noções de design e usabilidade. É ideal para quem gosta de tecnologia, resolver problemas e quer entender como funcionam os softwares que usamos todos os dias. Após o curso, o aluno pode trabalhar como programador, desenvolvedor web ou seguir estudando na área de computação e engenharia de software.
+      </div>
+    </div>
+
+    <!-- Agente Comunitário de Saúde -->
+    <div class="curso saude">
+      <h3>Agente Comunitário de Saúde</h3>
+      <div class="descricao">
+        O curso de Agente Comunitário de Saúde forma profissionais que ajudam a melhorar a qualidade de vida das pessoas na comunidade. O aluno aprende sobre prevenção de doenças, primeiros socorros, visitas domiciliares e promoção da saúde. Durante o curso, desenvolve empatia, responsabilidade social e trabalho em equipe. É indicado para quem gosta de cuidar das pessoas e fazer a diferença na vida da comunidade. Após a formação, o aluno pode trabalhar em postos de saúde, campanhas de vacinação e programas de atenção básica.
+      </div>
+    </div>
+
+    <!-- Marketing Digital -->
+    <div class="curso marketing">
+      <h3>Marketing Digital</h3>
+      <div class="descricao">
+        O curso de Marketing Digital ensina como divulgar produtos, serviços e ideias na internet. O aluno aprende sobre redes sociais, criação de conteúdo, anúncios online, identidade visual e estratégias de comunicação. Também desenvolve habilidades de criatividade, planejamento e trabalho em equipe. É um curso perfeito para quem gosta de redes sociais, design e comunicação. Depois de formado, o estudante pode atuar em empresas, agências de publicidade ou até abrir seu próprio negócio online.
+      </div>
+    </div>
+
+    <!-- Título EJA -->
+    <div class="titulo-eja">
+      <h2>Educação de Jovens e Adultos - EJA</h2>
+    </div>
+
+    <!-- Informática Básica -->
+    <div class="curso informatica">
+      <h3>Informática Básica</h3>
+      <div class="descricao">
+        (Fundamental - EJA com Qualificação Profissional)<br><br>
+        O curso de Informática Básica apresenta os fundamentos essenciais do uso do computador, como navegação na internet, edição de textos, planilhas e apresentações. Ideal para quem deseja ingressar no mundo digital e se preparar para o mercado de trabalho ou estudos futuros. O aluno também aprende noções de segurança digital e ética no uso das tecnologias, ampliando suas competências para o dia a dia.
+      </div>
+    </div>
+
+    <!-- Agente Comunitário de Saúde EJATEC -->
+    <div class="curso saude">
+      <h3>Agente Comunitário de Saúde (EJATEC)</h3>
+      <div class="descricao">
+        (Ensino Médio - EJATEC)<br><br>
+        O curso de Agente Comunitário de Saúde do EJA TEC tem como objetivo formar profissionais conscientes e comprometidos com o bem-estar social. O estudante aprende a atuar na prevenção de doenças, na promoção da saúde e no fortalecimento do vínculo entre comunidade e unidades de saúde. Com uma formação prática e cidadã, o aluno é preparado para contribuir com políticas públicas e ações de cuidado coletivo, atuando em campanhas, visitas e projetos sociais.
+      </div>
+    </div>
+
+    <!-- Informática EJA TEC -->
+    <div class="curso informatica">
+      <h3>Informática (EJATEC)</h3>
+      <div class="descricao">
+        (Ensino Médio - EJATEC)<br><br>
+        O curso de Informática amplia os conhecimentos tecnológicos e capacita o estudante para utilizar softwares e ferramentas avançadas em diversas áreas. O aluno aprende sobre hardware, sistemas operacionais, aplicativos e internet, além de fundamentos de programação e redes. É ideal para quem deseja ingressar na área da tecnologia, desenvolver habilidades digitais e conquistar melhores oportunidades no mercado de trabalho moderno.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="ano"></span> Desenvolvedores:Joanna Cibely e Leticia</p>
+  </footer>
+
+  <script>
+    // Mostra ou oculta descrições ao clicar
+    document.querySelectorAll('.curso').forEach(curso => {
+      curso.addEventListener('click', () => {
+        curso.classList.toggle('ativo');
+      });
+    });
+
+    // Atualiza o ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
